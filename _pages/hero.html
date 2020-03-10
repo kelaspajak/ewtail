@@ -40,8 +40,8 @@ title: Hero
           <div id="special_component" :style="menuStyle">
               <h1 class="text-gray-800 text-3xl font-extrabold">Materi Perpajakan</h1>
               <div class="specials-table-container lg:flex lg:my-0 lg:mx-auto">
-                  <table>
-                    <thead>
+                  <table class="w-11/12 mx-auto my-0 border-collapse table-fixed">
+                    <thead class="mt-4">
                       <tr>
                         <th>KUP</th>
                       </tr>
@@ -52,20 +52,20 @@ title: Hero
                           {% for item in dataidCategory limit:6 %}
                           <tr class="nameandprice">
                               <td class="dotStyle">
-                                  <span class="text-sm text-gray-800">{{item.Document}}</span>
+                                  <span class="text-sm text-gray-800 bg-white">{{item.Document}}</span>
                               </td>
                               <td class="dotStyle">
-                                  <span class="text-xs text-gray-800">{{ item.LastUpdated | date: "%b" }}</span>
+                                  <span class="text-xs text-gray-800 bg-white">{{ item.LastUpdated | date: "%b" }}</span>
                               </td>
                           </tr>
-                          <tr class="description">
-                              <td class="text-xs text-gray-800" colspan="2">{{item.Topic}}</td>
-                          </tr>
+                          <tr class="px-8 pt-1 pb-8 mx-10">
+                            <td class="text-xs text-gray-800" colspan="2">{{item.Topic}}</td>
+                        </tr>
                           {% endfor %}
                       </tbody>
 
                   </table>
-                  <table>
+                  <table class="w-11/12 mx-auto my-0 border-collapse table-fixed">
                     <thead>
                       <tr>
                         <th>PPh</th>
@@ -78,21 +78,21 @@ title: Hero
                       
                       <tr class="nameandprice">
                           <td class="dotStyle">
-                              <span class="text-sm text-gray-800">{{item.Document}}</span>
+                              <span class="text-sm text-gray-800 bg-white">{{item.Document}}</span>
                           </td>
                           <td class="dotStyle">
-                              <span class="text-xs text-gray-800">{{ item.LastUpdated | date: "%b" }}</span>
+                              <span class="text-xs text-gray-800 bg-white">{{ item.LastUpdated | date: "%b" }}</span>
                           </td>
                       </tr>
-                      <tr class="description">
-                          <td class="text-xs text-gray-800" colspan="2">{{item.Topic}}</td>
-                      </tr>
+                      <tr class="px-8 pt-1 pb-8 mx-10">
+                        <td class="text-xs text-gray-800" colspan="2">{{item.Topic}}</td>
+                    </tr>
                       {% endfor %}
                   </tbody>
                   </table>
 
-                  <table>
-                    <thead>
+                  <table class="w-11/12 mx-auto my-0 border-collapse table-fixed">
+                    <thead class="mt-4">
                       <tr>
                         <th>PPN</th>
                       </tr>
@@ -103,15 +103,15 @@ title: Hero
                         {% for item in dataidCategory limit:6 %}
                         <tr class="nameandprice">
                             <td class="dotStyle">
-                                <span class="text-sm text-gray-800">{{item.Document}}</span>
+                                <span class="text-sm text-gray-800 bg-white">{{item.Document}}</span>
                             </td>
                             <td class="dotStyle">
-                                <span class="text-xs text-gray-800">{{ item.LastUpdated | date: "%b" }}</span>
+                                <span class="text-xs text-gray-800 bg-white">{{ item.LastUpdated | date: "%b" }}</span>
                             </td>
                         </tr>
-                        <tr class="description">
-                            <td class="text-xs text-gray-800" colspan="2">{{item.Topic}}</td>
-                        </tr>
+                        <tr class="px-8 pt-1 pb-8 mx-10">
+                          <td class="text-xs text-gray-800" colspan="2">{{item.Topic}}</td>
+                      </tr>
                         {% endfor %}
                     </tbody>
 
