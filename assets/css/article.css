@@ -16,13 +16,6 @@
     text-align: center;
 }
 
-.specials-container table {
-    width: 90%;
-    margin: 0px auto;
-    table-layout: fixed;
-    border-collapse: collapse;
-}
-
 #special_component {
     width: 100%;
     background-color: #fff;
@@ -30,16 +23,12 @@
 }
 
 .nameandprice td {
-    padding: 1em 0 0 0;
+    padding: 1rem 0 0 0;
     vertical-align: bottom;
-    background-image: radial-gradient(black 1px, transparent 0px);
+    background-image: radial-gradient(circle, black 1px, transparent 0px);
     background-size: 8px 8px;
     background-repeat: repeat-x;
     background-position: left bottom;
-}
-
-.nameandprice span {
-    background-color: #fff;
 }
 
 .nameandprice td:first-child {
@@ -54,13 +43,8 @@
 
 .nameandprice td:last-child {
     text-align: right;
-    width: 3em;
+    width: 2rem;
     font-size: 20px;
-}
-
-.description td {
-    text-align: left;
-    padding: 8px 0px 15px 15px;
 }
 
 td:last-child span {
@@ -77,5 +61,5 @@ td:last-child span {
 }
 
 .dotStyle {
-  background-image: radial-gradient(#eee, 1px, transparent 0px);
+  background-image: radial-gradient(circle, black 1px, transparent 0px);
 }
