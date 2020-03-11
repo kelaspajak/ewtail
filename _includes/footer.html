@@ -1,0 +1,95 @@
+<div x-data="{ show: false }" x-init="setTimeout(() => show = true, 500)" x-show="show" x-transition:enter="ease-out duration-500" x-transition:enter-start="opacity-0 scale-98 translate-y-2" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="ease-in duration-500" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-100 translate-y-2" class="transition transform fixed bottom-0 inset-x-0 px-2 pb-10 sm:px-0 sm:pb-6">
+    <a href="/pricing" class="flex items-center justify-between rounded-lg shadow-lg pl-6 pr-4 py-3 bg-purple-800 sm:hidden">
+      <p class="text-gray-200">
+        <strong class="font-medium text-white">
+          Dapatkan
+        </strong>
+        Sekarang
+      </p>
+      <span class="flex items-center justify-center px-3 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-white hover:text-gray-600 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+        →
+      </span>
+    </a>
+    <div class="hidden sm:block max-w-8xl mx-auto px-4 lg:px-6">
+      <div class="py-3 pl-6 pr-3 rounded-lg bg-purple-800 shadow-lg">
+        <div class="flex items-center justify-between flex-wrap">
+          <div class="w-full flex-1 flex items-center sm:w-0">
+            <p class="text-gray-200 truncate">
+              <strong class="font-medium text-white md:hidden">
+                Dapatkan
+              </strong>
+              <strong class="hidden md:inline font-medium text-white">
+                Dapatkan
+              </strong>
+              <span class="lg:hidden">
+                Resume Perpajakan Terlengkap
+              </span>
+              <!-- <span class="hidden md:inline lg:hidden">
+                to all of the components in Tailwind UI
+              </span> -->
+              <span class="hidden lg:inline">
+                Resume Perpajakan Terlengkap
+              </span>
+            </p>
+          </div>
+          <div class="flex-shrink-0">
+            <div class="rounded-md shadow-sm">
+              <a href="/pricing" class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded text-gray-900 bg-white hover:text-gray-600 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+                Dapatkan akses →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /*
+      https://benfurfie.co.uk/articles/alpinejs-a-lightweight-alternative-to-vue
+      untuk dropdown  buka topik
+    */
+    function dropdown() {
+        return {
+            show: false,
+            open() { this.show = true },
+            close() { this.show = false },
+            isOpen() { return this.show === true },
+        }
+    }
+</script>
+
+  <!--
+    https://codepen.io/desandro/pen/MwJoLQ
+  -->
+
+
+<script>
+  function resizeGridItem(item){
+  grid = document.getElementsByClassName("grid")[0];
+  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+  rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+    item.style.gridRowEnd = "span "+rowSpan;
+}
+
+function resizeAllGridItems(){
+  allItems = document.getElementsByClassName("item");
+  for(x=0;x<allItems.length;x++){
+    resizeGridItem(allItems[x]);
+  }
+}
+
+function resizeInstance(instance){
+    item = instance.elements[0];
+  resizeGridItem(item);
+}
+
+window.onload = resizeAllGridItems();
+window.addEventListener("resize", resizeAllGridItems);
+
+allItems = document.getElementsByClassName("item");
+for(x=0;x<allItems.length;x++){
+  imagesLoaded( allItems[x], resizeInstance);
+}
+</script>

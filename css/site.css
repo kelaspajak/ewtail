@@ -1,0 +1,28 @@
+---
+---
+/* Front matter is necessary for Jekyll */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "_includes/syntax";
+
+/* Write your styles below this line. */
+
+/* Write your styles above this line. */
+
+@tailwind utilities;
+
+
+html{
+    font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    line-height:1.5 !important
+} 
+
+@variants hover {
+    .shadow-raised {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.boxer {
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0% 0.2); }
