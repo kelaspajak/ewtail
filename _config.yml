@@ -69,3 +69,7 @@ branch: master
 google_analytics: UA-146778045-2
 
 baseurl: /ewtail
+
+collections:
+  fitur:
+    output: true
