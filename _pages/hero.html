@@ -93,7 +93,7 @@ title: Hero
 <div class="container lg:max-w-screen-lg mx-auto px-6 py-10">
     
     <div class="mb-8">
-    {% assign docs_by_category = site.fitur | where: "category", dataid | group_by: "topik" %}
+    {% assign docs_by_category = site.fitur | where: "category", "aspekpajak" | group_by: "topik" %}
     {% for cat in docs_by_category %}
         <div class="flex items-baseline justify-between border-b-2 border-gray-200 mb-10">
             <h2 class="text-base font-bold tracking-wide uppercase py-4 border-b-2 border-red-200 -mb-2px">
